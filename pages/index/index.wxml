@@ -1,13 +1,30 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<view class="main">
+ 
+  <view class="slides">
+    <swiper autoplay="{{true}}" indicator-dots="{{true}}" circular="{{true}}">
+      <swiper-item wx:for="{{swiperList}}" wx:key="index" class="" item-id="">
+        <navigator>
+          <image mode="widthFix" src="{{item.src}}" />
+        </navigator>
+      </swiper-item>
+    </swiper>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view class="video_wrap">
+    <navigator wx:for="{{dataList}}" wx:key="index" class="video_item" target="" url="../detail/detail?id={{item.aid}}" hover-class="navigator-hover" open-type="navigate">
+      <view class="video_img">
+        <image src="{{item.pic}}" />
+        <!-- <view class="video_info">
+          <view class="play_coun_wrap">
+            <text class="fa fa-play-circle-o"></text>
+            <text class="play_count">{{item.attribute}}</text>
+          </view>
+          <view class="comment_count_wrap">
+            <text class="fa fa-commenting-o"></text>
+            <text class="comment_count">{{item.duration}}</text>
+          </view>
+        </view> -->
+      </view>
+      <text class="video_title">{{item.title}}</text>
+    </navigator>
   </view>
 </view>

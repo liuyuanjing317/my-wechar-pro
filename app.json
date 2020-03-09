@@ -3,12 +3,13 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/home/home",
-    "pages/person/person"
+    "pages/person/person",
+    "pages/detail/detail"
   ],
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#FFCC66",
-    "navigationBarTitleText": "Hello world",
+    "navigationBarTitleText": "AiKi",
     "navigationBarTextStyle": "white",
     "enablePullDownRefresh":true
   },
@@ -23,12 +24,6 @@
         "iconPath": "static/images/home.png",
         "selectedIconPath": "static/images/home@selected.png",
         "text": "首页"
-      },
-      {
-        "pagePath": "pages/home/home",
-        "iconPath": "static/images/category.png",
-        "selectedIconPath": "static/images/category@selected.png",
-        "text": "分类"
       },
       {
         "pagePath": "pages/person/person",

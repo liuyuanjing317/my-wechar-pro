@@ -1,0 +1,7 @@
+<view class="detail">
+  <!-- <myTitle></myTitle> -->
+  <view class="vedio_info">
+    <image class="detail_img" src="{{detail.pic}}" />
+    <text class="detail_des" decode="{{true}}">{{detail.desc}}</text>
+  </view>
+</view>
